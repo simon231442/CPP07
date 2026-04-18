@@ -1,5 +1,7 @@
-#ifndef ITER_HPP
+#pragma once
+/*#ifndef ITER_HPP
 # define ITER_HPP
+*/
 
 # include <iostream>
 
@@ -23,4 +25,4 @@ void	printRainbow(T element)
 	(increase) ? color++ : color--;
 }
 
-#endif
+//#endif
