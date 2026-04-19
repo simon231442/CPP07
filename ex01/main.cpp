@@ -9,7 +9,7 @@ int		main(int ac, char **av)
 		iter(word.c_str(), word.length(), printRainbow<const char>);
 	}
 	else if (ac > 2)
-		iter(av, ac - 1, printRainbow<std::string>);
+		iter(&av[1], ac - 1, printRainbow<std::string>);
 
 	return 0;
 }
