@@ -6,7 +6,14 @@
 # include <iostream>
 
 template <typename T, typename U>
-void	iter(T* array, int const size,U f)	
+void	iter(T* array, int const size, U& f)	
+{
+	for (int i = 0; i < size; i++)
+		f(array[i]);
+}
+
+template <typename T, typename U>
+void	iter(T* array, int const size,U const & f)	
 {
 	for (int i = 0; i < size; i++)
 		f(array[i]);
@@ -32,6 +39,11 @@ void	printRainbow(T element)
 		index--;
 		if (index <= 0) increase = true;
 	}
+}
+
+void	toUpper(char& c)
+{
+	c = c - 32;
 }
 
 //#endif
