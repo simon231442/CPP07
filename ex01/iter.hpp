@@ -5,15 +5,15 @@
 
 # include <iostream>
 
-template <typename T, typename U>
-void	iter(T* array, int const size, U& f)	
+template <typename T, typename F>
+void	iter(T* array, int const size, F f)
 {
 	for (int i = 0; i < size; i++)
 		f(array[i]);
 }
 
-template <typename T, typename U>
-void	iter(T* array, int const size,U const & f)	
+template <typename T, typename F>
+void	iter(T const* array, int const size, F f)
 {
 	for (int i = 0; i < size; i++)
 		f(array[i]);
