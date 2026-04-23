@@ -2,6 +2,7 @@
 # define ARRAY_HPP
 
 # include <exception>
+# include <iostream>
 
 template <typename T>
 class Array
@@ -29,7 +30,7 @@ template <typename T>
 Array<T>::Array(unsigned int n) : array_(0), size_(n)
 {
 	if (size_ > 0)
-		array_ = new T[size_]();
+		array_ = new T[size_];
 }
 
 template <typename T>
@@ -79,7 +80,6 @@ T&		Array<T>::operator[](unsigned int index)
 }
 
 template <typename T>
-
 T const &	Array<T>::operator[](unsigned int index) const
 {
 	if (index >= this->size_)
@@ -96,7 +96,7 @@ unsigned int	Array<T>::size(void) const
 template <typename T>
 void			Array<T>::display(void) const
 {
-	for (int i = 0; i < size_; i++)
+	for (unsigned int i = 0; i < size_; i++)
 		std::cout << array_[i] << std::endl;//est-ce le const accesseur qui est appelle ?
 }
 
