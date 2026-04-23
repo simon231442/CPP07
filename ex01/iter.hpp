@@ -1,7 +1,5 @@
-#pragma once
-/*#ifndef ITER_HPP
+#ifndef ITER_HPP
 # define ITER_HPP
-*/
 
 # include <iostream>
 
@@ -46,4 +44,4 @@ void	toUpper(char& c)
 	c = c - 32;
 }
 
-//#endif
+#endif
